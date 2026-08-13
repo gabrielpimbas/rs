@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Bia ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hearts">
+      <span>❤️</span>
+      <span>💕</span>
+      <span>❤️</span>
+      <span>💖</span>
+      <span>❤️</span>
+    </div>
+
+    <main class="card">
+      <h1>Para Bia ❤️</h1>
+
+      <p class="intro">
+        Fiz essa pequena página só para lembrar o quanto você é especial.
+      </p>
+
+      <div class="message">
+        <p>
+          Desde que você apareceu na minha vida, alguns dias parecem mais leves,
+          alguns sorrisos aparecem sem motivo e alguns pensamentos sempre acabam
+          encontrando você.
+        </p>
+
+        <p>
+          Talvez eu não saiba escrever as palavras mais perfeitas do mundo, mas
+          sei que existe algo muito bonito em tudo que me faz lembrar de você.
+        </p>
+
+        <p>
+          Você tem um jeito que ilumina as coisas ao redor, e eu queria que essa
+          página fosse um pedacinho desse carinho transformado em algo que você
+          pudesse guardar.
+        </p>
+
+        <p class="signature">
+          Com carinho,<br />
+          <strong>Gabriel</strong>
+        </p>
+      </div>
+
+      <button id="loveBtn">Clique aqui 💌</button>
+
+      <p id="surprise" class="hidden"> ily ❤️</p>
+    </main>
+
+    <script>
+      const btn = document.getElementById("loveBtn");
+      const surprise = document.getElementById("surprise");
+
+      btn.addEventListener("click", () => {
+        surprise.classList.remove("hidden");
+        btn.textContent = "❤️";
+      });
+    </script>
+  </body>
+</html>

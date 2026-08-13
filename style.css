@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff9eb5, #ffd1dc, #ffe4ec);
+  overflow: hidden;
+}
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hearts span {
+  position: absolute;
+  font-size: 24px;
+  animation: float 8s linear infinite;
+  opacity: 0.8;
+}
+
+.hearts span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+  left: 30%;
+  animation-delay: 1.5s;
+}
+
+.hearts span:nth-child(3) {
+  left: 55%;
+  animation-delay: 3s;
+}
+
+.hearts span:nth-child(4) {
+  left: 75%;
+  animation-delay: 4.5s;
+}
+
+.hearts span:nth-child(5) {
+  left: 90%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(110vh) scale(0.9);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.9;
+  }
+
+  to {
+    transform: translateY(-20vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.card {
+  width: min(92vw, 700px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+  padding: 42px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(176, 40, 84, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card h1 {
+  color: #c2185b;
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.intro {
+  color: #6d214f;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+}
+
+.message {
+  text-align: left;
+  color: #4a2c3a;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.message p + p {
+  margin-top: 16px;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 28px;
+}
+
+button {
+  margin-top: 30px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  background: #d81b60;
+  transform: translateY(-2px);
+}
+
+#surprise {
+  margin-top: 20px;
+  color: #c2185b;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 28px;
+  }
+
+  .card h1 {
+    font-size: 2.3rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+}
